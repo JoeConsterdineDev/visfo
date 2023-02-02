@@ -17,8 +17,18 @@
 	.card-avatar {
 		border-top-left-radius: 0.25rem;
 		border-top-right-radius: 0.25rem;
-		height: 16rem;
-		width: 16rem;
+		height: 10rem;
+		width: 10rem;
+
+		@media (min-width: $sm) {
+			height: 12rem;
+			width: 12rem;
+		}
+
+		@media (min-width: $md) {
+			height: 16rem;
+			width: 16rem;
+		}
 	}
 
 	// Body
