@@ -1,3 +1,17 @@
-// Base
+// Variables
+@import "sass/variables/colours";
 
+// Reset
+@import "sass/reset/normalize";
+@import "sass/reset/box-sizing";
+@import "sass/reset/headings";
+
+// Base
 @import "sass/base/base";
+
+// Objects
+@import "sass/objects/container";
+
+// Components
+@import "sass/components/cards";
+@import "sass/components/header";

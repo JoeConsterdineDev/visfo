@@ -7,4 +7,5 @@ export type UserType = {
   followers: number;
   following: number;
   location: string;
+  type: string;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useStateContext } from '../../Providers';
 import FetchUsers from '../../Dispatchers';
+import Users from '../../Components/Users';
 
 const HomePage = () => {
   const { dispatch, state } = useStateContext();
@@ -11,7 +12,11 @@ const HomePage = () => {
   }, [users]);
 
   return (
-    <p>Hello World</p>
+    <div className="container">
+      <Users  
+        users={users}
+      />
+    </div>
   )
 };
 

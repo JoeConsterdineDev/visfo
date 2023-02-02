@@ -4,7 +4,7 @@ const Header = ({ applicationName }: {
 	applicationName: string
 }) => (
 	<header>
-		<h1>{applicationName}</h1>
+		<h1 className="header-title">{applicationName}</h1>
 	</header>
 );
 

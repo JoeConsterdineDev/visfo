@@ -66,5 +66,10 @@
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+ ]
 }
