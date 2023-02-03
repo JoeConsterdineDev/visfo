@@ -1,13 +1,18 @@
 import React from "react";
 import { UserType } from "../Types/UsersType";
 
-const Users = ({ users }: {
-	users: UserType[]
+const Users = ({ users, value }: {
+	users: UserType[],
+	value: string
 }) => {
-	console.log({ users });
+	const filterUsers = (user: UserType) => {
+		if(value === '') return user;
+		return user.login.toLowerCase().includes(value.toLowerCase());
+	}
 	return (
 		<section className="cards">
-			{users?.map(({ id, login, avatar_url, type }) => {
+			{users?.filter(filterUsers)
+				.map(({ id, login, avatar_url, type }) => {
 				return (
 					<div className="card" key={id}>
 						<div className="card-body">
