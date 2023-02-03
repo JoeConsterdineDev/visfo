@@ -17,10 +17,15 @@ const HomePage = () => {
     setValue(value);
   }
 
+  const resetFilters = () => {
+    setValue('');
+  }
+
   return (
     <div className="container">
       <Input
         setInputValue={setInputValue}
+        resetFilters={resetFilters}
       />
       <Users  
         users={users}

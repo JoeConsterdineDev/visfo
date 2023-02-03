@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
+import Button from './Button';
 
-const Input = ({ setInputValue }: {
-	setInputValue: (value: string) => void
+const Input = ({ setInputValue, resetFilters }: {
+	setInputValue: (value: string) => void,
+	resetFilters: () => void
 }) => {
 	const inputRef = useRef<HTMLInputElement>(null);
 
@@ -9,9 +11,19 @@ const Input = ({ setInputValue }: {
 		const value = inputRef.current.value;
 		setInputValue(value);
 	}
+
+	const resetInput = () => {
+		inputRef.current.value = '';
+	}
 	return (
 		<section className="section">
-			<input className="input" type="text" onChange={handleOnChange} ref={inputRef} />
+			<div>
+				<input className="input" type="text" onChange={handleOnChange} ref={inputRef} />
+			</div>
+			<Button
+				resetFilters={resetFilters}
+				resetInput={resetInput}
+			/>
 		</section>
 	)
 }
